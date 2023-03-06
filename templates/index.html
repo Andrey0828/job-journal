@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align="center">Works log</h1>
+{% set k = 'Action # ' %}
+    {% for i in ex %}
+        <h2>{{ k }} {{ loop.index }}</h2>
+        <table>
+        <tr><th>Title of activity</th><th>Team leader</th><th>Duraction</th><th>List of collaborators</th><th>Is finished</th></tr>
+        <tr><td>{{ i[0] }}</td><td>{{ i[1][0] }} {{ i[1][0] }}</td><td>{{ i[2] }}</td><td>{{ i[3] }}</td><td>{{ i[4] }}</td></tr>
+        </table>
+    {% endfor %}
+{% endblock %}
